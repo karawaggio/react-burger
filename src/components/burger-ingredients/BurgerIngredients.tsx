@@ -24,22 +24,31 @@ const BurgerIngredients = (props: { ingredients: any; }) => {
     };
 
     return(
-        <section className="burger-ingredients-wrap">
-            <div style={{ display: 'flex' }}>
-                <Tab value="bun" active={current === 'bun'} onClick={setCurrentTab }>
+        <section className="burger-ingredients-panel">
+            <h1 className="pt-10 pb-5 text text_type_main-medium">Cоберите конструктор</h1>
+            <div className="pb-10" style={{ display: 'flex' }}>
+                <Tab value="bun" active={current === 'bun'} onClick={setCurrentTab}>
                     Булки
                 </Tab>
-                <Tab value="sauce" active={current === 'sauce'} onClick={setCurrentTab }>
+                <Tab value="sauce" active={current === 'sauce'} onClick={setCurrentTab}>
                     Соусы
                 </Tab>
                 <Tab value="main" active={current === 'main'} onClick={setCurrentTab}>
                     Начинки
                 </Tab>
             </div>
-            
-            {filteredIngredients.map((ingredient: any) => (
-                <IngredientCard ingredient={ingredient} />
-            ))}
+            <h2 className="text text_type_main-medium ingredient-group-heading">
+                {
+                    current === "bun" ? "Булки" :
+                    current === "sauce" ? "Соусы" :
+                    current === "main" ? "Начинки" :  ""
+                }
+            </h2>
+            <section className="burger-ingredients-wrap">
+                {filteredIngredients.map((ingredient: any) => (
+                    <IngredientCard ingredient={ingredient} />
+                ))}
+            </section>
 
         </section>
     );
