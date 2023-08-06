@@ -225,7 +225,7 @@ class App extends React.Component {
         <AppHeader/>
         <main>
           <BurgerIngredients ingredients={this.state}/>
-          <BurgerConstructor/>
+          <BurgerConstructor ingredients={this.state}/>
         </main>
       </div>
     );
