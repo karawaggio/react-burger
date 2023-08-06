@@ -1,3 +1,25 @@
+.burger-ingredients-panel {
+    width: 45%;
+}
+
 .burger-ingredients-wrap {
-    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.ingredient-group-heading {
+    text-transform: capitalize;
+}
+
+.card {
+    text-align: center;
+}
+
+.card:nth-child(2) {
+    padding-left: 24px;
+}
+
+.card-icon-price {
+    display: flex;
+    justify-content: center;
 }
