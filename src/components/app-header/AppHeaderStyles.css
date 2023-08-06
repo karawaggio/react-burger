@@ -1,0 +1,25 @@
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.nav-container {
+    width: 100%;
+    min-width: 750px;
+    display: grid;
+    grid-template-columns: max-content auto max-content;
+}
+
+.nav {
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.menu-item {
+    display: flex;
+}
+
+.logo {
+    text-align: center;
+    padding-right: 30px;
+}
