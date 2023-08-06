@@ -1,9 +1,12 @@
 import React from 'react';
+import "./BurgerIngredients.css"
 
 
 function BurgerIngredients() {
     return(
-        <div></div>
+        <section className="burger-ingredients-wrap">
+
+        </section>
     );
 }
 
