@@ -1,9 +1,12 @@
 import React from 'react';
+import "./BurgerConstructor.css"
 
 
 function BurgerConstructor() {
     return(
-        <div></div>
+        <section className="burger-constructor-wrap">
+            
+        </section>
     );
 }
 
