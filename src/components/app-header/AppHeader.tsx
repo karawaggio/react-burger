@@ -19,9 +19,9 @@ function AppHeader() {
                 </li>
             </ul>
             
-            <div className="pb-4 pt-4 logo">
+            <span className="pb-4 pt-4 logo">
                 <Logo />
-            </div>
+            </span>
 
             <ul className="nav">
                 <li className="pl-5 pr-5 pb-4 pt-4 menu-item">
