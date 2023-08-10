@@ -35,7 +35,7 @@ const BurgerIngredients = (props: { ingredients: any; }) => {
     const typeOrder = ['bun', 'sauce', 'main'];
 
     return(
-        <section className="burger-ingredients-panel">
+        <section className="burger-ingredients-wrap">
             <h1 className="pt-10 pb-5 text text_type_main-medium">Cоберите конструктор</h1>
             <div className="pb-10" style={{ display: 'flex' }}>
                 <Tab value="bun" active={current === 'bun'} onClick={() => scrollToSection("bun")}>
@@ -57,7 +57,7 @@ const BurgerIngredients = (props: { ingredients: any; }) => {
                             type === "main" ? "Начинки" :  ""
                         }
                     </h2>
-                    <section className="burger-ingredients-wrap">
+                    <section className="burger-ingredients-container">
                     {
                         groupedIngredients[type].map((ingredient: any, id: any) => (
                             <IngredientCard ingredient={ingredient} key={id} />

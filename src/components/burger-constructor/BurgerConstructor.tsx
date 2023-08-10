@@ -8,7 +8,7 @@ const BurgerConstructor = (props: { ingredients: any; }) => {
 
     return(
         <section className="pt-25 burger-constructor-wrap">
-            <div style={{ display: "flex", alignItems: "center", flexDirection: "column", gap: "10px" }}>
+            <div className="burger-constructor-container">
                 {ingredients.map((ingredient: any, id: any) => (
                   <ConstructorElement key={id} type={ingredient.type} isLocked={true} text={ingredient.name} price={ingredient.price} thumbnail={ingredient.image} />  
                 ))}

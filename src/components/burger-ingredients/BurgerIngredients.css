@@ -1,4 +1,4 @@
-.burger-ingredients-wrap {
+.burger-ingredients-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
