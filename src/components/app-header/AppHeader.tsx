@@ -11,11 +11,11 @@ function AppHeader() {
             <ul className="nav">
                 <li className="pl-5 pr-5 pb-4 pt-4 menu-item">
                     <BurgerIcon type="primary" />
-                    <span className="pl-2 text text_type_main-default">Конструктор</span>
+                    <a href="#" className="pl-2 text text_type_main-default">Конструктор</a>
                 </li>
                 <li className="pl-5 pr-5 pb-4 pt-4 menu-item">
                     <ListIcon type="secondary" />
-                    <span className="pl-2 text text_type_main-default">Лента заказов</span>
+                    <a href="#" className="pl-2 text text_type_main-default">Лента заказов</a>
                 </li>
             </ul>
             
@@ -26,7 +26,7 @@ function AppHeader() {
             <ul className="nav">
                 <li className="pl-5 pr-5 pb-4 pt-4 menu-item">
                     <ProfileIcon type="secondary" />
-                    <span className="pl-2 text text_type_main-default pl-2 pr-2">Личный кабинет</span> 
+                    <a href="#" className="pl-2 text text_type_main-default pl-2 pr-2">Личный кабинет</a> 
                 </li>
             </ul>
 
