@@ -1,7 +1,3 @@
-.burger-ingredients-panel {
-    width: 45%;
-}
-
 .burger-ingredients-wrap {
     display: grid;
     grid-template-columns: 1fr 1fr;
