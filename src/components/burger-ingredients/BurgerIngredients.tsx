@@ -3,10 +3,28 @@ import "./BurgerIngredients.css"
 import IngredientCard from './IngredientCard';
 import { Tab } from '@ya.praktikum/react-developer-burger-ui-components';
 
-const BurgerIngredients = (props: { ingredients: any; }) => {
+interface Ingredient {
+    _id: string;
+    name: string;
+    type: string;
+    proteins: number;
+    fat: number;
+    carbohydrates: number;
+    calories: number;
+    price: number;
+    image: string;
+    image_mobile: string;
+    image_large: string;
+    __v: number;
+}
+
+interface BurgerIngredientsProps {
+    ingredients: Ingredient[];
+}
+
+const BurgerIngredients: React.FC<BurgerIngredientsProps> = ({ ingredients }) => {
     
-    const ingredients = props.ingredients;
-    const [current, setCurrent] = React.useState('one')
+    const [current, setCurrent] = React.useState<string>('one')
 
     // Выберем базовую вкладку в панели по умолчанию
     React.useEffect(() => {
