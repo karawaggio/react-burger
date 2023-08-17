@@ -1,4 +1,21 @@
 .burger-ingredients-container {
+    max-height: 700px;
+    overflow: scroll;
+}
+
+.burger-ingredients-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.burger-ingredients-container::-webkit-scrollbar-corner {
+    color: transparent;
+}
+
+.burger-ingredients-container::-webkit-scrollbar-thumb {
+    background: #f1f1f1;
+}
+
+.burger-ingredients-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
