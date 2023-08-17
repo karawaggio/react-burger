@@ -43,11 +43,26 @@
 main {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin: 0 20px;
+  margin: 0 auto;
+  width: 95%;
 }
 
 @media screen and (max-width: 1130px) {
   main {
+      width: max-content;
       grid-template-columns: 1fr;
+      margin: 0 100px;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+  main {
+      width: 75%;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+  main {
+      width: 60%;
     }
 }
