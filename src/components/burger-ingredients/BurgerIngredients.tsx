@@ -3,10 +3,28 @@ import "./BurgerIngredients.css"
 import IngredientCard from './IngredientCard';
 import { Tab } from '@ya.praktikum/react-developer-burger-ui-components';
 
-const BurgerIngredients = (props: { ingredients: any; }) => {
+interface Ingredient {
+    _id: string;
+    name: string;
+    type: string;
+    proteins: number;
+    fat: number;
+    carbohydrates: number;
+    calories: number;
+    price: number;
+    image: string;
+    image_mobile: string;
+    image_large: string;
+    __v: number;
+}
+
+interface BurgerIngredientsProps {
+    ingredients: Ingredient[];
+}
+
+const BurgerIngredients: React.FC<BurgerIngredientsProps> = ({ ingredients }) => {
     
-    const ingredients = props.ingredients;
-    const [current, setCurrent] = React.useState('one')
+    const [current, setCurrent] = React.useState<string>('one')
 
     // Выберем базовую вкладку в панели по умолчанию
     React.useEffect(() => {
@@ -35,7 +53,7 @@ const BurgerIngredients = (props: { ingredients: any; }) => {
     const typeOrder = ['bun', 'sauce', 'main'];
 
     return(
-        <section className="burger-ingredients-panel">
+        <section className="burger-ingredients-wrap">
             <h1 className="pt-10 pb-5 text text_type_main-medium">Cоберите конструктор</h1>
             <div className="pb-10" style={{ display: 'flex' }}>
                 <Tab value="bun" active={current === 'bun'} onClick={() => scrollToSection("bun")}>
@@ -57,7 +75,7 @@ const BurgerIngredients = (props: { ingredients: any; }) => {
                             type === "main" ? "Начинки" :  ""
                         }
                     </h2>
-                    <section className="burger-ingredients-wrap">
+                    <section className="burger-ingredients-container">
                     {
                         groupedIngredients[type].map((ingredient: any, id: any) => (
                             <IngredientCard ingredient={ingredient} key={id} />

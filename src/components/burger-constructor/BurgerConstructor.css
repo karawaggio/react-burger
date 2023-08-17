@@ -1,3 +1,6 @@
-.burger-constructor-wrap {
-    width: 45%;
+.burger-constructor-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
 }
