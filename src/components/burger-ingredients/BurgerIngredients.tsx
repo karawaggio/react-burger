@@ -54,7 +54,7 @@ const BurgerIngredients: React.FC<BurgerIngredientsProps> = ({ ingredients }) =>
 
     return(
         <section className="burger-ingredients-wrap">
-            <h1 className="pt-10 pb-5 text text_type_main-medium">Cоберите конструктор</h1>
+            <h1 className="pt-10 pb-5 text text_type_main-medium">Cоберите бургер</h1>
             <section className="pb-10" style={{ display: 'flex' }}>
                 <Tab value="bun" active={current === 'bun'} onClick={() => scrollToSection("bun")}>
                     Булки
