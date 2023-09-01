@@ -49,9 +49,9 @@ main {
 
 @media screen and (max-width: 1130px) {
   main {
-      width: max-content;
       grid-template-columns: 1fr;
-      margin: 0 100px;
+      align-items: center;
+      justify-items: center;
     }
 }
 

@@ -11,7 +11,7 @@ const App = () => {
    return (
    <div className="App">
       <AppHeader/>
-      <main>
+      <main className="mb-10 ml-10 mr-10">
          <BurgerIngredients ingredients={ingredients}/>
          <BurgerConstructor ingredients={ingredients}/>
       </main>

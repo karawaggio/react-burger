@@ -19,12 +19,25 @@
     background: #f1f1f1;
 }
 
-.burger-constructor-btn-container {
-    text-align: end;
+.burger-constructor-actions {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.counter {
+    position: relative;
+    background-color: transparent;
 }
 
 @media screen and (min-width: 1600px) {
     .constructor-element {
         margin-right: 15px;
+    }
+}
+
+@media screen and (max-width: 1130.5px) {
+    .burger-constructor-actions {
+        justify-content: center;
     }
 }
