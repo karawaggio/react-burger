@@ -24,7 +24,7 @@ interface BurgerIngredientsProps {
 const BurgerConstructor: React.FC<BurgerIngredientsProps> = ({ ingredients }) => {
     
     return(
-        <section className="pt-25 burger-constructor-wrap">
+        <section className="pl-10 pt-25 burger-constructor-wrap">
             <div className="burger-constructor-container">
                 {ingredients.map((ingredient: any, id: any) => (
                   <ConstructorElement key={id} type={ingredient.type} isLocked={true} text={ingredient.name} price={ingredient.price} thumbnail={ingredient.image} />  

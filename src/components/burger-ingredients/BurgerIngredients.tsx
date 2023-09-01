@@ -55,7 +55,7 @@ const BurgerIngredients: React.FC<BurgerIngredientsProps> = ({ ingredients }) =>
     return(
         <section className="burger-ingredients-wrap">
             <h1 className="pt-10 pb-5 text text_type_main-medium">Cоберите конструктор</h1>
-            <div className="pb-10" style={{ display: 'flex' }}>
+            <section className="pb-10" style={{ display: 'flex' }}>
                 <Tab value="bun" active={current === 'bun'} onClick={() => scrollToSection("bun")}>
                     Булки
                 </Tab>
@@ -65,7 +65,8 @@ const BurgerIngredients: React.FC<BurgerIngredientsProps> = ({ ingredients }) =>
                 <Tab value="main" active={current === 'main'} onClick={() => scrollToSection("main")}>
                     Начинки
                 </Tab>
-            </div>
+            </section>
+            <section className="burger-ingredients-container">
             {typeOrder.map((type) => (
                 <div key={type}>
                     <h2 className="pt-10 pb-6 text text_type_main-medium ingredient-group-heading" id={type}>
@@ -75,7 +76,7 @@ const BurgerIngredients: React.FC<BurgerIngredientsProps> = ({ ingredients }) =>
                             type === "main" ? "Начинки" :  ""
                         }
                     </h2>
-                    <section className="burger-ingredients-container">
+                    <section className="burger-ingredients-row">
                     {
                         groupedIngredients[type].map((ingredient: any, id: any) => (
                             <IngredientCard ingredient={ingredient} key={id} />
@@ -84,6 +85,7 @@ const BurgerIngredients: React.FC<BurgerIngredientsProps> = ({ ingredients }) =>
                     </section>
                 </div>
             ))}
+            </section>
         </section>
     );
 }

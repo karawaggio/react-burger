@@ -3,4 +3,24 @@
     align-items: center;
     flex-direction: column;
     gap: 10px;
+    max-height: 540px;
+    overflow: scroll;
+}
+
+.burger-constructor-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.burger-constructor-container::-webkit-scrollbar-corner {
+    color: transparent;
+}
+
+.burger-constructor-container::-webkit-scrollbar-thumb {
+    background: #f1f1f1;
+}
+
+@media screen and (min-width: 1600px) {
+    .constructor-element {
+        margin-right: 15px;
+    }
 }
