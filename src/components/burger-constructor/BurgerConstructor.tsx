@@ -1,6 +1,7 @@
 import React from 'react';
 import "./BurgerConstructor.css"
 import { ConstructorElement }  from '@ya.praktikum/react-developer-burger-ui-components';
+import { Button } from '@ya.praktikum/react-developer-burger-ui-components';
 
 interface Ingredient {
     _id: string;
@@ -27,9 +28,14 @@ const BurgerConstructor: React.FC<BurgerIngredientsProps> = ({ ingredients }) =>
         <section className="pl-10 pt-25 burger-constructor-wrap">
             <div className="burger-constructor-container">
                 {ingredients.map((ingredient: any, id: any) => (
-                  <ConstructorElement key={id} type={ingredient.type} isLocked={true} text={ingredient.name} price={ingredient.price} thumbnail={ingredient.image} />  
+                    <ConstructorElement key={id} type={ingredient.type} isLocked={true} text={ingredient.name} price={ingredient.price} thumbnail={ingredient.image} />  
                 ))}
-           </div>
+            </div>
+            <div className="mt-8 mr-6 burger-constructor-btn-container">
+                <Button htmlType="button" type="primary" size="medium">
+                    Оформить заказ
+                </Button>
+            </div>
         </section>
     );
 }
