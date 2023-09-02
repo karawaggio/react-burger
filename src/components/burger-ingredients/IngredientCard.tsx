@@ -20,7 +20,7 @@ const IngredientCard = (props: { ingredient: any; }) => {
             <div key={ingredient._id} className="pt-6 pb-8 card" onClick={openModal}>
                 <img className="pl-4 pr-4" src={ingredient.image} alt={ingredient.name} />
                 <div className="pb-1 pt-1 card-icon-price">
-                    <span className="text text_type_digits-default">{ingredient.price}</span><CurrencyIcon type="primary" />
+                    <span className="pr-2 text text_type_digits-default">{ingredient.price}</span><CurrencyIcon type="primary" />
                 </div>
                 <p className="text text_type_main-default">{ingredient.name}</p>
                 {isModalOpen && (
