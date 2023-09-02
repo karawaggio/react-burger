@@ -37,7 +37,7 @@ const BurgerConstructor: React.FC<BurgerIngredientsProps> = ({ ingredients }) =>
     };
 
     return(
-        <section className="pl-10 pt-25 burger-constructor-wrap">
+        <section className="pl-10 pt-25 burger-constructor-wrap" id="orders-constructor">
             <div className="pr-5 burger-constructor-container">
                 {ingredients.map((ingredient: any, id: any) => (
                     <ConstructorElement key={id} type={ingredient.type} isLocked={true} text={ingredient.name} price={ingredient.price} thumbnail={ingredient.image} />

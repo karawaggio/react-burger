@@ -53,7 +53,7 @@ const BurgerIngredients: React.FC<BurgerIngredientsProps> = ({ ingredients }) =>
     const typeOrder = ['bun', 'sauce', 'main'];
 
     return(
-        <section className="burger-ingredients-wrap">
+        <section className="burger-ingredients-wrap" id="ingredients">
             <h1 className="pt-10 pb-5 text text_type_main-medium">Cоберите бургер</h1>
             <section className="pb-10" style={{ display: 'flex' }}>
                 <Tab value="bun" active={current === 'bun'} onClick={() => scrollToSection("bun")}>
