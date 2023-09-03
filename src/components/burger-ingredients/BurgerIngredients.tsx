@@ -1,6 +1,6 @@
 import React from 'react';
 import "./BurgerIngredients.css"
-import IngredientCard from './IngredientCard';
+import IngredientsListingCard from './IngredientsListingCard';
 import { Tab } from '@ya.praktikum/react-developer-burger-ui-components';
 
 interface Ingredient {
@@ -79,7 +79,7 @@ const BurgerIngredients: React.FC<BurgerIngredientsProps> = ({ ingredients }) =>
                     <section className="burger-ingredients-row">
                     {
                         groupedIngredients[type].map((ingredient: any, id: any) => (
-                            <IngredientCard ingredient={ingredient} key={id} />
+                            <IngredientsListingCard ingredient={ingredient} key={id} />
                         ))
                     }
                     </section>
