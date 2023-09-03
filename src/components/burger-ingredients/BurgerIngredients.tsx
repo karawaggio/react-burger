@@ -1,6 +1,6 @@
 import React from 'react';
 import "./BurgerIngredients.css"
-import IngredientsListingCard from './IngredientsListingCard';
+import IngredientsListingCard from './ingredients-cards/IngredientsListingCard';
 import { Tab } from '@ya.praktikum/react-developer-burger-ui-components';
 
 interface Ingredient {

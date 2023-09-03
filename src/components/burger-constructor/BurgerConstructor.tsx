@@ -5,7 +5,7 @@ import { Button } from '@ya.praktikum/react-developer-burger-ui-components';
 import { CurrencyIcon } from '@ya.praktikum/react-developer-burger-ui-components'
 import { Counter }  from '@ya.praktikum/react-developer-burger-ui-components';
 import Modal from "../modal/Modal";
-import OrderInfo from './OrderInfo';
+import OrderInfo from './order-info/OrderInfo';
 import { createPortal } from 'react-dom';
 
 interface Ingredient {

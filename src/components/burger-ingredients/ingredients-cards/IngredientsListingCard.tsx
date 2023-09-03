@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { CurrencyIcon } from '@ya.praktikum/react-developer-burger-ui-components';
 import './BurgerIngredients.css';
-import Modal from "../modal/Modal";
+import Modal from "../../modal/Modal";
 import IngredientsDetailCard from './IngredientsDetailCard';
 import { createPortal } from 'react-dom';
 
