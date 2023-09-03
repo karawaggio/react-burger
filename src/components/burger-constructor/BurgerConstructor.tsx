@@ -6,6 +6,7 @@ import { CurrencyIcon } from '@ya.praktikum/react-developer-burger-ui-components
 import { Counter }  from '@ya.praktikum/react-developer-burger-ui-components';
 import Modal from "../modal/Modal";
 import OrderInfo from './OrderInfo';
+import { createPortal } from 'react-dom';
 
 interface Ingredient {
     _id: string;
@@ -29,14 +30,6 @@ interface BurgerIngredientsProps {
 const BurgerConstructor: React.FC<BurgerIngredientsProps> = ({ ingredients }) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
-    const openModal = () => {
-        setIsModalOpen(true);
-    };
-
-    const closeModal = () => {
-        setIsModalOpen(false);
-    };
-
     return(
         <section className="pl-10 pt-25 burger-constructor-wrap" id="orders-constructor">
             <div className="pr-5 burger-constructor-container">
@@ -47,14 +40,14 @@ const BurgerConstructor: React.FC<BurgerIngredientsProps> = ({ ingredients }) =>
             <div className="mt-10 mr-6 burger-constructor-actions">
                 <Counter count={0} size="default" extraClass="mr-1" />
                 <CurrencyIcon type="primary" />
-                <Button htmlType="button" type="primary" size="medium" extraClass="ml-10" onClick={openModal}>
+                <Button htmlType="button" type="primary" size="medium" extraClass="ml-10" onClick={() => {setIsModalOpen(true)}}>
                     Оформить заказ
                 </Button>
             </div>
-            {isModalOpen && (
-              <Modal onClose={closeModal}>
+            {isModalOpen && createPortal(
+              <Modal onClose={() => {setIsModalOpen(false)}}>
                 <OrderInfo/>
-              </Modal>
+              </Modal>, document.body
             )}
         </section>
     );
