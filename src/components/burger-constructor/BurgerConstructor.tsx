@@ -6,7 +6,6 @@ import { CurrencyIcon } from '@ya.praktikum/react-developer-burger-ui-components
 import { Counter }  from '@ya.praktikum/react-developer-burger-ui-components';
 import Modal from "../modal/Modal";
 import OrderInfo from './order-info/OrderInfo';
-import { createPortal } from 'react-dom';
 
 interface Ingredient {
     _id: string;
@@ -44,10 +43,10 @@ const BurgerConstructor: React.FC<BurgerIngredientsProps> = ({ ingredients }) =>
                     Оформить заказ
                 </Button>
             </div>
-            {isModalOpen && createPortal(
+            {isModalOpen && (
               <Modal onClose={() => {setIsModalOpen(false)}}>
                 <OrderInfo/>
-              </Modal>, document.body
+              </Modal>
             )}
         </section>
     );

@@ -3,7 +3,6 @@ import { CurrencyIcon } from '@ya.praktikum/react-developer-burger-ui-components
 import '../BurgerIngredients.css';
 import Modal from "../../modal/Modal";
 import IngredientsDetailCard from './IngredientsDetailCard';
-import { createPortal } from 'react-dom';
 
 const IngredientsListingCard = (props: { ingredient: any; }) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -18,10 +17,10 @@ const IngredientsListingCard = (props: { ingredient: any; }) => {
                 </div>
                 <p className="text text_type_main-default">{ingredient.name}</p>
             </div>
-            {isModalOpen && createPortal(
+            {isModalOpen && (
               <Modal onClose={() => {setIsModalOpen(false)}}>
                 <IngredientsDetailCard singleIngredient={ingredient} />
-              </Modal>, document.body
+              </Modal>
             )}
         </section>
     )
